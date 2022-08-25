@@ -35,7 +35,7 @@
     <div class="col-lg-6" id="create3">
         <form method="post" class="d-flex form1" id="fmMater">
             {% csrf_token %}
-            <div class="form_title_material col-lg-4">
+            <div class="й col-lg-4">
                 <small>название материала</small>
                 {{form.title_material|as_crispy_field}}
             </div>
@@ -84,10 +84,6 @@
                 })
             })
         })
-
-
-
-
 </script>
 
 {% endblock javascript %}

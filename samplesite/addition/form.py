@@ -3,6 +3,7 @@ from django import forms
 from .models import *
 
 
+
 class CategoryForm(ModelForm):
     title = forms.CharField(widget=forms.widgets.TextInput(attrs={'class': 'input_category'}), label='')
 

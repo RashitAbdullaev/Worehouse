@@ -7,7 +7,6 @@ from .pylib.barcode import generate_barcode
 from django.views.generic import ListView, CreateView, TemplateView, FormView
 from django.forms import modelformset_factory, Textarea, TextInput, Select, RadioSelect
 
-
 class Category(CreateView):
     template_name = 'addition/create_category.html'
     form_class = CategoryForm
@@ -71,7 +70,7 @@ class Rents(CreateView):
         return context
 
 
-def info_rents(request, worker, ):
+def info_rents(request, worker):
     rent = Rent.objects.filter(worker=worker)
     Rents.ean_list.clear()
     RentFormSet = modelformset_factory(Rent, fields=('material', 'date_of_issue', 'quantity',),
